@@ -1,56 +1,24 @@
-## Proiect Laborator VVSS - Platforma de inchirieri auto
+# Car Rental – Desktop Application (.NET)
 
-### Membri echipa:
-- Dumitrasc Ciprian - 10LF331
-- Bangala Costin - 10LF331
-- Ilie Paul - 10LF331
-- Barbu Calin - 10LF331
+A desktop application built using C# and .NET for managing car rental operations, including reservations, inventory, and pricing logic.
 
-## Project Structure
-The project is organized using Layered Architecture and contains the following components:
+## My Contribution
 
-### 1. CarRental.Domain
-Contains the core entities of the application:
- - Car Entity
- - Id (int) – Primary key
- - LicensePlate (string) – License plate number (unique, required)
- - Model (string) – Car model (minimum 4 characters)
- - ManufacturingYear (int) – Year of manufacture
- - DailyRate (decimal) – Daily rental rate
- - IsAvailable (bool) – Availability status
+This project was developed as part of a team. I contributed to the implementation of core features such as business logic, data handling, and application structure.
 
-### 2. CarRental.Repository
-Implements data access using Entity Framework Core:
- - CarRentalDbContext – EF Core context
- - ICarRepository – Repository interface for Car
- - CarRepository – Repository implementation for Car
+## Features
 
-### 3. CarRental.Service
-Contains business logic, validations, and exception handling:
- - ICarService – Service interface for Car
- - CarService – Implementation with validations:
-    - LicensePlate is required (not null, empty, or whitespace)
-    - DailyRate > 0
-    - ManufacturingYear <= CurrentYear
-    - Model length >= 4 characters
+- Reservation management
+- Vehicle inventory tracking
+- Pricing and business rules
+- Database integration
 
-### 4. CarRental.Tests
-Project dedicated to unit testing and mocking:
- - CarServiceTests – 32 unit tests for CarService (using Mo)
- #### Car Management Implementation (by Ciprian)
-Implemented Features
- - CRUD operations for Car
- - Business logic validations:
-   - License plate is required and must be unique
-   - Daily rate must be > 0
-   - Manufacturing year must be ≤ current year
-   - Model length >= 4 characters
- - Logging for all operations
- - Exception handling
+## Tech Stack
 
-### Technologies Used
- - .NET 8.0
- - Entity Framework Core 8.0
- - Moq (for mocking)
- - xUnit (for unit testing)
- - Microsoft.Extensions.Logging
+- C#
+- .NET (WPF)
+- SQL Server
+
+## Notes
+
+This repository contains the version I worked on during development. The complete team version may include additional features and integrations.
